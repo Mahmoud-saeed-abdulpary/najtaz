@@ -1,0 +1,23 @@
+h1{
+    font-weight: bold;
+    font-size: $h1;
+    color:$black
+}
+h2{
+    font-weight: bold;
+    font-size: $h2;
+    color:$black
+}
+
+.intro {
+    color: $main-color;
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    span{
+        height: 21px;
+        width: 3px;
+        display: block;
+        background-color: $main-color;
+    }
+}

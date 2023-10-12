@@ -1,0 +1,61 @@
+.new__courses{
+    margin-top: 3.75rem;
+    .content {
+        display: grid;
+        gap: 1rem;
+        padding-bottom: 2rem;
+    }
+    .new__courses-container {
+        display: grid;
+        grid-auto-flow: row;
+        row-gap: 2rem;
+    }
+    .slide__content {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+
+        .image__container {
+            overflow: hidden;
+            border: 1px solid $main-color;
+            border-radius: 4px;
+            img{
+                display: block;
+                object-fit: cover;
+                object-position: center center;
+                height: 100%;
+                padding: 0;
+                margin: 0;
+                width: 100%;
+            }
+        }
+        .card {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 2rem;
+            background-color: $main-color;
+            padding:2.25rem 2rem;
+            border-radius: 10px 0 0 10px;
+            color: $white;
+            ul{
+                display: flex;
+                gap: 2rem;
+                li{
+                    display: flex;
+                    align-items: center;
+                    gap: 1rem;
+                }
+            }
+        }
+    }
+    .new__courses-carusel{
+        position: relative;
+        .slick-next {
+            position: absolute;
+            top: 50%;
+            left: 0;
+        }
+    }
+}
+

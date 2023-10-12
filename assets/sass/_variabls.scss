@@ -1,0 +1,57 @@
+// Font Family
+$tajawal:'Tajawal', sans-serif;
+
+
+// --------- Colors ---------------
+
+$main-color:#3C50E0;
+$body-color:#FEFEFF;
+
+// black
+$black     : #182525 ; 
+$black-80  : #525C57 ; 
+$black-60  : #939F99 ; 
+$black-40  : #CACFCE ; 
+$black-20  : #DBE0DE ; 
+$black-10  : #E6EAE9 ; 
+$black-5   : #F9FAFA ; 
+$black-o-70: #000000b1;
+
+// white
+$white     : #ffffff ; 
+$white-o-70: #ffffffb1;
+
+// gray
+$gray      : #E9E9E9 ; 
+$light-gray: #F9FAFB;
+
+// error 
+$error      : #FB4E4E ; 
+$error-light: #FF6262 ; 
+$error-dark : #E93C3C;
+
+// success 
+$success      : #2AC769 ; 
+$success-light: #40DD7F ; 
+$success-dark : #1AB759;
+
+// warning 
+$warning      : #F6A609 ; 
+$warning-light: #FFBC1F ; 
+$warning-dark : #E89806;
+
+
+// Responsive Variables 
+$xx-layout : 'only screen and (max-width: 1600px)';
+$xl-layout : 'only screen and (max-width: 1365px)';
+$lg-layout : 'only screen and (max-width: 1199px)';
+$md-layout:'only screen and (max-width: 991px)';
+$sm-layout: 'only screen and (max-width: 767px)';
+$xs-layout:'only screen and (max-width: 767px)';
+
+// transition
+$transition: all .3s ease 0s;
+
+// typography
+$h1:2.375rem;
+$h2:2.5rem;
