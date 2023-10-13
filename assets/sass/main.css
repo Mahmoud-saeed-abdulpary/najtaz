@@ -26,8 +26,8 @@
 html,
 body {
   min-height: 100%;
-  height: 9999px;
   width: 100%;
+  scroll-behavior: smooth;
   background-color: #FEFEFF;
   font-family: "Tajawal", sans-serif;
 }
@@ -262,9 +262,10 @@ textarea:focus {
 
 .btn__solid-success {
   background-color: #2AC769;
-  border: #3C50E0 1px solid;
-  padding: 1rem 1.8125rem;
+  border: #1AB759 1px solid;
+  padding: 0.7rem 1.2rem;
   color: #ffffff;
+  text-align: center;
   border-radius: 0.25rem;
   font-size: 14px;
   font-weight: 500;
@@ -272,7 +273,7 @@ textarea:focus {
 }
 .btn__solid-success:hover {
   background-color: #F9FAFB;
-  color: #3C50E0;
+  color: #2AC769;
 }
 @media only screen and (max-width: 767px) {
   .btn__solid-success {
@@ -624,6 +625,78 @@ section.navbar .nav__link:hover {
   }
 }
 
+.courses__header {
+  padding: 3.125rem;
+}
+.courses__header .courses__header__container {
+  position: relative;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  z-index: 2;
+}
+.courses__header .courses__header__container h2 {
+  position: relative;
+}
+.courses__header .courses__header__container h2::before {
+  position: absolute;
+  content: url("../images/shape/line.png");
+  left: 0;
+  top: 50%;
+}
+.courses__header .courses__header__container > p {
+  font-size: 1.625rem;
+  padding-top: 2rem;
+}
+.courses__header .courses__header__container .blur {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+.courses__header .courses__section-2 {
+  display: flex;
+  margin-top: 2rem;
+  align-items: start;
+}
+.courses__header .courses__section-2 .content {
+  margin-top: 2rem;
+  text-align: start;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+  margin-inline-end: -2rem;
+}
+.courses__header .courses__section-2 .header__badge {
+  display: flex;
+  justify-content: space-between;
+  width: -moz-fit-content;
+  width: fit-content;
+  max-width: 300px;
+  border-radius: 1.125rem;
+  background-color: #ffffff;
+  align-items: center;
+  padding: 0 0.625rem;
+}
+.courses__header .courses__section-2 .header__badge p {
+  padding: 0.5rem;
+}
+.courses__header .courses__section-2 .header__badge:first-child {
+  font-size: 1.25rem;
+}
+.courses__header .courses__section-2 .header__badge:last-child {
+  box-shadow: 18.21px 0px 52.8px 0px rgba(40, 43, 111, 0.08);
+  font-size: 0.875rem;
+  justify-content: space-between;
+}
+.courses__header .courses__section-2 .btn__container {
+  margin-top: 1rem;
+}
+
 footer {
   border-top: 1px solid #DBE0DE;
   padding-block: 1rem;
@@ -753,81 +826,17 @@ h3 {
   left: 0;
 }
 
-.courses__header {
-  padding: 3.125rem;
-}
-.courses__header .courses__header__container {
-  position: relative;
-  display: grid;
-  place-items: center;
-  text-align: center;
-  z-index: 2;
-}
-.courses__header .courses__header__container h2 {
-  position: relative;
-}
-.courses__header .courses__header__container h2::before {
-  position: absolute;
-  content: url("../images/shape/line.png");
-  left: 0;
-  top: 50%;
-}
-.courses__header .courses__header__container > p {
-  font-size: 1.625rem;
-  padding-top: 2rem;
-}
-.courses__header .courses__header__container .blur {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: -1;
-}
-.courses__header .courses__section-2 {
-  display: flex;
-  margin-top: 2rem;
-  align-items: start;
-}
-.courses__header .courses__section-2 .content {
-  margin-top: 2rem;
-  text-align: start;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  justify-content: center;
-  position: relative;
-  z-index: 1;
-  margin-inline-end: -2rem;
-}
-.courses__header .courses__section-2 .header__badge {
-  display: flex;
-  justify-content: space-between;
-  width: -moz-fit-content;
-  width: fit-content;
-  max-width: 300px;
-  border-radius: 1.125rem;
-  background-color: #ffffff;
-  align-items: center;
-  padding: 0 0.625rem;
-}
-.courses__header .courses__section-2 .header__badge p {
-  padding: 0.5rem;
-}
-.courses__header .courses__section-2 .header__badge:first-child {
-  font-size: 1.25rem;
-}
-.courses__header .courses__section-2 .header__badge:last-child {
-  box-shadow: 18.21px 0px 52.8px 0px rgba(40, 43, 111, 0.08);
-  font-size: 0.875rem;
-  justify-content: space-between;
-}
-.courses__header .courses__section-2 .btn__container {
-  margin-top: 1rem;
-}
-
 .courses__list {
   background-color: rgba(247, 246, 249, 0.5);
   padding-block: 3rem;
+}
+.courses__list .title {
+  display: grid;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+.courses__list .title p {
+  font-size: 1.25rem;
 }
 .courses__list .courses__container {
   display: grid;
@@ -855,4 +864,9 @@ h3 {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   margin-block: 1rem;
+}
+.courses__list .courses__container .course__card .course__info ul li {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
 }/*# sourceMappingURL=main.css.map */

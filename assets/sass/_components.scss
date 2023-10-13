@@ -60,16 +60,17 @@
 }
 .btn__solid-success{
     background-color: $success;
-    border: $main-color 1px solid ;
-    padding: 1rem 1.8125rem;
+    border: $success-dark 1px solid ;
+    padding: 0.7rem 1.2rem;
     color: $white;
+    text-align: center;
     border-radius: .25rem;
     font-size: 14px;
     font-weight: 500;
     line-height: 24px;
     &:hover{
         background-color: $light-gray;
-        color: $main-color;
+        color: $success;
     }
     @media #{$sm-layout} {
         padding:0.7rem 1rem ;

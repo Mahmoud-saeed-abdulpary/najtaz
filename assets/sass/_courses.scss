@@ -1,80 +1,14 @@
-.courses__header{
-    padding: 3.125rem;
-    .courses__header__container {
-        position: relative;
-        display: grid;
-        place-items:center;
-        text-align: center;
-        z-index: 2;
-        h2{
-            position: relative;
-            &::before{
-                position: absolute;
-                content: url('../images/shape/line.png');
-                left: 0;
-                top: 50%;
-            }
-        }
-        & > p{
-            font-size: 1.625rem;
-            padding-top: 2rem;
-        }
-        .blur{ 
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            z-index: -1;
-            // background-color: $black;
-        }
-    }
-    .courses__section-2 {
-        display: flex;
-        margin-top: 2rem;
-        align-items: start;
-        .content{
-            margin-top: 2rem;
-            text-align: start;
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-            justify-content: center;
-            position: relative;
-            z-index: 1;
-            margin-inline-end: -2rem;
-        }
-        .header__badge {
-            display: flex;
-            justify-content: space-between;
-            width: fit-content;
-            max-width: 300px;
-            border-radius: 1.125rem;
-            background-color: $white;
-            align-items: center;
-            padding: 0 .625rem;
-            p{
-                padding: .5rem;
-            }
-            &:first-child{
-                font-size: 1.25rem;
-
-            }
-            &:last-child{
-                box-shadow: 18.21px 0px 52.8px 0px rgba(40,43,111,.08);
-                font-size: .875rem;
-                justify-content: space-between;
-            }
-            // background-color: ;
-        }
-        .btn__container {
-            margin-top: 1rem;
-        }
-    }
-}
-
 .courses__list {
     background-color: $gray-2;
     padding-block: 3rem;
+    .title {
+        display: grid;
+        gap: 1rem;
+        margin-bottom: 2rem;
+        p{
+            font-size: 1.25rem;
+        }
+    }
     .courses__container {
         display: grid;
         grid-template-columns: repeat(auto-fit,minmax(320px , 1fr));
@@ -97,6 +31,11 @@
                     display: grid;
                     grid-template-columns: repeat(2 , 1fr);
                     margin-block: 1rem;
+                    li{
+                        display: flex;
+                        align-items: center;
+                        gap: .7rem;
+                    }
                 }
 
             }
