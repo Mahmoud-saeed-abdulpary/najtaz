@@ -326,6 +326,7 @@
             left: 50%;
             transform: translate(-50%, -50%);
             z-index: -1;
+            overflow: hidden;
             // background-color: $black;
         }
     }
@@ -394,7 +395,8 @@
             img{
                 display: block;
                 width: 100%;
-                object-fit: contain;
+                height: 100%;
+                object-fit: cover;
             }
         }
         .header__badge {
