@@ -362,7 +362,7 @@
 
             }
             &:last-child{
-                box-shadow: 18.21px 0px 52.8px 0px rgba(40,43,111,.08);
+                box-shadow:$shadow;
                 font-size: .875rem;
                 justify-content: space-between;
             }

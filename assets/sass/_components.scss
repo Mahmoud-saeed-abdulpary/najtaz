@@ -3,77 +3,76 @@
     (2) link's
 */
 
-
 // button's
-.btn__outline{
-    border: $main-color 1px solid ;
+.btn__outline {
+    border: $main-color 1px solid;
     padding: 1rem 1.8125rem;
     color: $main-color;
-    border-radius: .25rem;
+    border-radius: 0.25rem;
     font-size: 14px;
     font-weight: 500;
     line-height: 24px;
-    &:hover{
+    &:hover {
         background-color: $main-color;
         color: $white;
     }
     @media #{$sm-layout} {
-        padding:0.7rem 1rem ;
+        padding: 0.7rem 1rem;
     }
 }
 
-.btn__solid-light{
+.btn__solid-light {
     background-color: $white;
-    border: $main-color 1px solid ;
-    padding: .7rem 1rem;
+    border: $main-color 1px solid;
+    padding: 0.7rem 1rem;
     color: $main-color;
-    border-radius: .25rem;
+    border-radius: 0.25rem;
     font-size: 14px;
     font-weight: 500;
     line-height: 24px;
     text-align: center;
-    &:hover{
+    &:hover {
         background-color: $gray;
         color: $main-color;
     }
     @media #{$sm-layout} {
-        padding:0.7rem 1rem ;
+        padding: 0.7rem 1rem;
     }
 }
-.btn__solid{
+.btn__solid {
     background-color: $main-color;
-    border: $main-color 1px solid ;
+    border: $main-color 1px solid;
     padding: 0.7rem 1.2rem;
     color: $white;
     text-align: center;
-    border-radius: .25rem;
+    border-radius: 0.25rem;
     font-size: 14px;
     font-weight: 500;
     line-height: 24px;
-    &:hover{
+    &:hover {
         background-color: $light-gray;
         color: $main-color;
     }
     @media #{$sm-layout} {
-        padding:0.7rem 1rem ;
+        padding: 0.7rem 1rem;
     }
 }
-.btn__solid-success{
+.btn__solid-success {
     background-color: $success;
-    border: $success-dark 1px solid ;
+    border: $success-dark 1px solid;
     padding: 0.7rem 1.2rem;
     color: $white;
     text-align: center;
-    border-radius: .25rem;
+    border-radius: 0.25rem;
     font-size: 14px;
     font-weight: 500;
     line-height: 24px;
-    &:hover{
+    &:hover {
         background-color: $light-gray;
         color: $success;
     }
     @media #{$sm-layout} {
-        padding:0.7rem 1rem ;
+        padding: 0.7rem 1rem;
     }
 }
 
@@ -86,34 +85,146 @@
     place-content: center;
     place-items: center;
     border-radius: 100%;
-    position: absolute;
+    &:hover {
+        background-color: $main-color;
+        color: $white;
+    }
 }
-
-
-//! cards 
+.btn__sub{
+    box-shadow: 0px 4px 9px 0px #0000000D;
+    padding: 1rem;
+    background-color: $white;
+    display: block;
+    border-radius: 20px;
+    color: $main-color;
+    margin-block: 3rem 1.5rem;
+    font-weight: 700;
+    // margin-inline: auto;
+    &:hover{
+        background-color: $main-color;
+        color: $white;
+    }
+}
+.btn__sub__main{
+    box-shadow: 0px 4px 9px 0px #0000000D;
+    padding: 1rem;
+    background-color: $main-color;
+    display: block;
+    border-radius: 20px;
+    color: $white;
+    margin-block: 3rem 1.5rem;
+    font-weight: 700;
+    // margin-inline: auto;
+    &:hover{
+        background-color: $black-5;
+    }
+}
+//! cards
 
 .course__card {
     max-width: fit-content;
     background-color: $white;
-    margin-inline:auto ;
-    .course__info{
+    margin-inline: auto;
+    .course__info {
         padding: 1rem;
         display: flex;
         flex-direction: column;
-        p{
+        p {
             font-size: 14px;
             font-weight: medium;
         }
-        ul{
+        ul {
             display: grid;
-            grid-template-columns: repeat(2 , 1fr);
+            grid-template-columns: repeat(2, 1fr);
             margin-block: 1rem;
-            li{
+            li {
                 display: flex;
                 align-items: center;
-                gap: .7rem;
+                gap: 0.7rem;
             }
         }
+    }
+}
 
+//!================ taps ================
+
+.tab__component {
+    $screen-sm: 620px;
+    $screen-md: 760px;
+    $screen-lg: 990px;
+    $screen-xl: 1070px;
+    /* Tab mixin - just give it a breakpoint
+/* ---------------*/
+
+    @mixin responsive-tabs($breakpoint) {
+        @media (max-width: $breakpoint) {
+
+            .tabs__list--open {
+                .tabs__item {
+                    position: relative;
+                    height: auto;
+                }
+                .tabs__item--active > .tabs__link:after {
+                    content: none;
+                }
+            }
+
+            .tabs__item {
+                width: 100%;
+                max-width: 100%;
+                border-right: 0; 
+            }
+        }
+    }
+
+    /* Tab mixin
+  /* ---------------*/
+
+    .tabs {
+    }
+
+    // Breakpoint variations
+    .tabs--sm {
+        @include responsive-tabs($screen-sm);
+    }
+
+    .tabs--md {
+        @include responsive-tabs($screen-md);
+    }
+
+    .tabs--lg {
+        @include responsive-tabs($screen-lg);
+    }
+
+    .tabs--xl {
+        @include responsive-tabs($screen-xl);
+    }
+
+    .tabs__item--active {
+        > .tabs__link {
+            position: relative;
+            z-index: 3;
+        }
+    }
+
+    .tabs__area {
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.5s linear;
+        height: 0;
+    }
+
+    .tabs__area--active {
+        opacity: 1;
+        visibility: visible;
+        transition: opacity 0.5s linear;
+        height: auto;
+    }
+
+    .tabs__content {
+        margin-bottom: 0;
+        overflow: hidden;
+        position: relative;
+        clear: both;
     }
 }
