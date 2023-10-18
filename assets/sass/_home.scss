@@ -403,6 +403,9 @@
             display: grid;
             place-items: center;
             margin-block:2rem ;
+            span{
+                font-size: 50px;
+            }
         }
         .card__body{
             padding: 2rem;
@@ -431,7 +434,52 @@
         }
     }
     .plan__card.featured {
-        background-color: $main;
-        
+        background-color: $main-color;
+        scale: 1.05;
+        .card__header{
+            color: $white;
+        }
+        .card__body{
+            .btn__container{
+                a{
+                    background-color: $main-color;
+                    color: $white;
+                    &:hover{
+                        background-color: darken($main-color, 10%);
+                    }
+                }
+            }
+        }
+    }
+}
+
+// cta section
+.cta__section{
+    padding-block: 3rem;
+    .cta__container{
+        display: flex;
+        gap: 2rem;
+        align-items: center;
+        flex-wrap: wrap;
+        .cta__content{
+            flex: 1 1 400px;
+            display: grid;
+            gap: 1rem;
+            .btn__container{
+                margin-top:2rem ;
+            }
+        }
+        .cta__image{
+            flex: 1 1 400px;
+            order: -1;
+            img{
+                display: block;
+                width: 100%;
+                object-fit: contain;
+            }
+        }
+        @media #{$md-layout} {
+            padding-inline:2rem ;
+        }
     }
 }

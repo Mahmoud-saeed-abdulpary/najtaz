@@ -35,11 +35,11 @@
   <!-- start main content -->
   <main>
     <header class="header">
+      <!-- 
         <div class="header__style4">
           <div class="header__style4-container">
             <div class="header__image">
               <img src="./assets/images/header/header-4.png" alt="">
-              <!-- <img src="./assets/images/header/header-6.png" alt=""> -->
             </div>
             <div class="header__content">
                 <div class="content">
@@ -103,6 +103,7 @@
 
             </div>
         </div>
+        -->
         <div class="header__style1">
             <div class="header__style1-container">
               <div class="header__content">
@@ -362,6 +363,7 @@
         <video src="https://res.cloudinary.com/codelife/video/upload/v1637805738/intro_l5ul1k.mp4" poster="./assets/images/home/home-video.png"></video>
       </div>
     </section>
+    <!-- end home video section -->
     <!-- start blog section -->
     <section class="blog__section">
       <div class="container">
@@ -404,11 +406,46 @@
     <!-- start plans section -->
     <section class="plans__section">
       <div class="plans__container container">
+        <div class="plan__card">
+          <div class="card__header">
+            <p>الباقة المجانية</p>
+            <div>
+              <span>0</span><strong>ريال</strong>
+            </div>
+            <strong>لمدة شهر</strong>
+          </div>
+          <div class="card__body">
+            <ul>
+              <li>
+                <span><img src="./assets/images/icons/Subtract.svg" alt=""></span>
+                <p>تدريبات لجميع النماذج</p>
+              </li>
+              <li>
+                <span><img src="./assets/images/icons/Subtract.svg" alt=""></span>
+                <p>تدريبات لجميع النماذج</p>
+              </li>
+              <li>
+                <span><img src="./assets/images/icons/Subtract.svg" alt=""></span>
+                <p>تدريبات لجميع النماذج</p>
+              </li>
+              <li>
+                <span><img src="./assets/images/icons/Subtract.svg" alt=""></span>
+                <p>تدريبات لجميع النماذج</p>
+              </li>
+            </ul>
+            <div class="btn__container">
+              <a href="#" class="btn__sub">اشتراك</a>
+            </div>
+            <a href="#">المزيد من التفاصيل</a>
+          </div>
+        </div>
         <div class="plan__card featured">
           <div class="card__header">
             <p>الباقة المجانية</p>
-            <span>0 ريال</span>
-            <strong>لمدة شهر</strong>
+            <div>
+              <span>450</span><strong>ريال</strong>
+            </div>
+            <strong>سنوى</strong>
           </div>
           <div class="card__body">
             <ul>
@@ -438,7 +475,9 @@
         <div class="plan__card">
           <div class="card__header">
             <p>الباقة المجانية</p>
-            <span>0 ريال</span>
+            <div>
+              <span>0</span><strong>ريال</strong>
+            </div>
             <strong>لمدة شهر</strong>
           </div>
           <div class="card__body">
@@ -469,7 +508,20 @@
       </div>
     </section>
     <!-- end plans section -->
-    <!-- end home video section -->
+    <section class="cta__section">
+      <div class="cta__container container">
+        <div class="cta__content">
+          <h2>قيّم مستواك الآن في اختبار القدرات</h2>
+          <p>"قم بإجراء اختبار تجريبي واختبر مهاراتك لبدء رحلتك و التركيز على تحسين نقاط الضعف لديك"</p>
+          <div class="btn__container">
+            <a href="" class="btn__solid">تقديم الاختبار</a>
+          </div>
+        </div>
+        <div class="cta__image">
+          <img src="./assets/images/home/cta-img.png" alt="">
+        </div>
+      </div>
+    </section>
   </main>
   <!-- end main content -->
   <footer >
@@ -533,6 +585,7 @@
         slidesToScroll: 1,
         autoplay: true,
         autoplaySpeed: 4000,
+        centerd:true
       });
 
       $('.latist__courses__container').slick({

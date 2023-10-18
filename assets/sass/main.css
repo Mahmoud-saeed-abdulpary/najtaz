@@ -27,7 +27,6 @@ html,
 body {
   min-height: 100%;
   width: 100%;
-  height: 9999px;
   scroll-behavior: smooth;
   background-color: #FEFEFF;
   font-family: "Tajawal", sans-serif;
@@ -906,6 +905,7 @@ section.navbar .nav__link:hover {
 footer {
   border-top: 1px solid #DBE0DE;
   padding-block: 1rem;
+  background-color: rgba(199, 199, 199, 0.1);
 }
 footer .footer__container {
   display: flex;
@@ -939,6 +939,9 @@ footer .footer__container .footer__links li:hover a {
   }
 }
 
+@media only screen and (max-width: 991px) {
+  /*style*/
+}
 h1 {
   font-weight: bold;
   font-size: 2.375rem;
@@ -1372,6 +1375,9 @@ h3 {
   place-items: center;
   margin-block: 2rem;
 }
+.plans__section .plan__card .card__header span {
+  font-size: 50px;
+}
 .plans__section .plan__card .card__body {
   padding: 2rem;
   border-radius: 0.625rem;
@@ -1397,7 +1403,51 @@ h3 {
   text-decoration: underline;
 }
 .plans__section .plan__card.featured {
-  background-color: main;
+  background-color: #3C50E0;
+  scale: 1.05;
+}
+.plans__section .plan__card.featured .card__header {
+  color: #ffffff;
+}
+.plans__section .plan__card.featured .card__body .btn__container a {
+  background-color: #3C50E0;
+  color: #ffffff;
+}
+.plans__section .plan__card.featured .card__body .btn__container a:hover {
+  background-color: #2035c9;
+}
+
+.cta__section {
+  padding-block: 3rem;
+}
+.cta__section .cta__container {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.cta__section .cta__container .cta__content {
+  flex: 1 1 400px;
+  display: grid;
+  gap: 1rem;
+}
+.cta__section .cta__container .cta__content .btn__container {
+  margin-top: 2rem;
+}
+.cta__section .cta__container .cta__image {
+  flex: 1 1 400px;
+  order: -1;
+}
+.cta__section .cta__container .cta__image img {
+  display: block;
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+@media only screen and (max-width: 991px) {
+  .cta__section .cta__container {
+    padding-inline: 2rem;
+  }
 }
 
 .courses__list {
